@@ -59,6 +59,7 @@ export interface Article {
   content: string
   total_likes: number
   created_at: string
+  image_url : string
 }
 
 export interface Brand {
@@ -67,5 +68,16 @@ export interface Brand {
   slug: string
   logo_url: string | null
   description: string | null
+  created_at: string
+}
+
+
+
+export interface Review {
+  id: string
+  product_id: string
+  user_id: string
+  rating: string | null
+  comment: string | null
   created_at: string
 }

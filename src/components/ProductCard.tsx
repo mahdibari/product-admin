@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Product } from '@/types'
 import { Edit, Trash2, Star, Package } from 'lucide-react'
 
+
 interface ProductCardProps {
   product: Product
   onEdit: (product: Product) => void

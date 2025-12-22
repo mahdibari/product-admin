@@ -6,7 +6,8 @@ import { supabase } from '@/lib/supabase'
 import ProductCard from '@/components/ProductCard'
 import ProductForm from '@/components/ProductForm'
 import DeleteConfirmation from '@/components/DeleteConfirmation'
-import { Plus, Search, MessageSquare, FileText } from 'lucide-react'
+import { Plus, Search, FileText } from 'lucide-react'
+
 
 import Link from 'next/link'
 
