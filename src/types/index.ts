@@ -1,3 +1,5 @@
+// types.ts
+
 export interface Product {
   id: string
   name: string
@@ -16,50 +18,21 @@ export interface Product {
   brand_id : string | null
 }
 
+export interface User {
+  id: string
+  email: string
+  display_name?: string
+  created_at: string
+  phone?: string
+  first_name?: string
+  last_name?: string
+}
+
 export interface Category {
   id: string
   name: string
   slug: string
   icon: string | null
-}
-
-export interface Ticket {
-  id: string
-  user_id: string
-  subject: string
-  status: 'open' | 'closed' | 'awaiting_user'
-  created_at: string
-  // برای نمایش نام کاربر، این فیلد را به صورت دستی اضافه می‌کنیم
-  user?: {
-    display_name: string | null
-  }
-}
-
-export interface TicketMessage {
-  id: string
-  ticket_id: string
-  user_id: string | null
-  admin_reply: Text
-  content: string
-  created_at: string
-  // برای نمایش نام کاربر، این فیلد را به صورت دستی اضافه می‌کنیم
-  user?: {
-    display_name: string | null
-  }
-}
-
-
-// ... (تایپ‌های قبلی)
-
-// --- تایپ جدید برای مقالات ---
-export interface Article {
-  id: string
-  title: string
-  slug: string
-  content: string
-  total_likes: number
-  created_at: string
-  image_url : string
 }
 
 export interface Brand {
@@ -71,13 +44,35 @@ export interface Brand {
   created_at: string
 }
 
-
-
+// --- نوع داده جدید برای نظرات ---
 export interface Review {
   id: string
-  product_id: string
   user_id: string
-  rating: string | null
-  comment: string | null
+  product_id: string
+  rating: number
+  comment: string
   created_at: string
+  // اطلاعات کاربر که از طریق join دریافت می‌شود
+  user: {
+    display_name?: string
+    first_name?: string
+    last_name?: string
+    email: string
+  }
+  // اطلاعات محصول که از طریق join دریافت می‌شود
+  product: {
+    name: string
+  }
 }
+
+export interface Article {
+  id: string
+  title: string
+  slug: string
+  content: string
+  total_likes: number
+  created_at: string
+  image_url : string
+}
+
+
