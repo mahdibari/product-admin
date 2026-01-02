@@ -3,7 +3,7 @@
 
 import { useState } from 'react'
 import { supabase } from '@/lib/supabase'
-import { X, Trash2 } from 'lucide-react'
+import {  Trash2 } from 'lucide-react'
 
 interface DeleteReviewConfirmationProps {
   id: string

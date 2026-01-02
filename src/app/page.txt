@@ -6,7 +6,7 @@ import { supabase } from '@/lib/supabase'
 import ProductCard from '@/components/ProductCard'
 import ProductForm from '@/components/ProductForm'
 import DeleteConfirmation from '@/components/DeleteConfirmation'
-import { Plus, Search, FileText, Users, MessageSquare, ShoppingBag } from 'lucide-react'
+import { Plus, Search, FileText, Users, MessageSquare } from 'lucide-react'
 // در فایل app/page.tsx یا فایل مسیرهای خود
 // در فایل app/page.tsx یا فایل مسیرهای خود
 
@@ -159,13 +159,6 @@ export default function Home() {
   <MessageSquare className="h-5 w-5 ml-2" />
   مدیریت نظرات
 </Link>
-<Link
-                href="/orders"
-                className="flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors duration-200"
-              >
-                <ShoppingBag className="h-5 w-5 ml-2" />
-                مشاهده سفارشات
-              </Link>
              
            
             </div>
